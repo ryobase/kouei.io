@@ -1,0 +1,14 @@
+version: '3'
+
+tasks:
+  dev:
+    cmds:
+      - deno run serve
+
+  build:
+    cmds:
+      - deno run build
+
+  clean:
+    cmds:
+      - rm -r output/

@@ -1,0 +1,58 @@
+---
+css: |
+    header {
+        padding: 0;
+        margin-bottom: 2rem;
+        grid-area: header;
+    }
+
+    .header-wrapper {
+        display: grid;
+        grid-template:
+            'brand . nav-list'
+            ;
+        grid-template-columns: auto 3fr auto;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        justify-items: stretch;
+        align-items: stretch;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+    }
+
+    .branding-wrapper {
+        margin: auto;
+        grid-area: brand;
+    }
+
+    .nav-wrapper {
+        margin: auto;
+        grid-area: nav-list;
+    }
+
+    ul.nav-list {
+        padding: 1.5rem;
+    }
+
+    .brand-link {
+        text-decoration: none;
+    }
+---
+
+<header class="container">
+	<div class="header-wrapper">
+		<div class="branding-wrapper">
+            <strong><a class="primary brand-link" href="/">Moss Pakhapoca</a></strong>
+		</div>
+		<div class="nav-wrapper">
+			<nav>
+				<ul class="nav-list">
+					<li>
+						<a class="secondary" href="/about">About Me</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
