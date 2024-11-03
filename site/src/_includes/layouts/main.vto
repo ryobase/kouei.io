@@ -4,9 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Homepage for kouei.io">
+
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/pico.fuchsia.css">
+    <link rel="stylesheet" href="/assets/css/gutenberg.min.css" media="print">
+    <link rel="stylesheet" href="/assets/css/book.min.css" media="print">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="/assets/fontawesome/css/solid.min.css">
+
     <link rel="stylesheet" href="/components.css">
+
     <title>{{ title }}</title>
   </head>
   <body>
@@ -15,5 +25,8 @@
       {{ content }}
     </main>
     {{ comp.views.footer() }}
+
+    {{# <script src="components.js"></script> #}}
+    <script src="/app/js/app.js"></script>
   </body>
 </html>

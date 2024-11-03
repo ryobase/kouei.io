@@ -1,0 +1,64 @@
+---
+css: |
+    footer {
+        margin-top: auto;
+        text-wrap: nowrap;
+        padding: 40px 0 30px 0;
+        grid-area: footer;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px 50px;
+        grid-template-areas:
+            'icons'
+            'footer-text';
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .texts-container {
+        grid-area: footer-text;
+    }
+
+    .icons-container {
+        grid-area: icons;
+    }
+
+    .icons-container > a {
+        text-decoration: none;
+    }
+
+    .icons-container > a > i {
+        font-size: 1.25rem;
+        padding: 2px;
+    }
+---
+
+{{ function getYear }}
+    {{>  const now = new Date()}}
+    {{now.getUTCFullYear()}}
+{{ /function }}
+
+<footer class="container-fluid footer-container">
+    <div class="icons-container">
+        <a href="https://github.com/ryobase" class="contrast">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/moss-pakhapoca-45415b173" class="contrast">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
+    <div class="texts-container">
+		<small>
+			&#169; {{ getYear() }} Moss Pakhapoca. All right reserved.
+		</small>
+	</div>
+</footer>

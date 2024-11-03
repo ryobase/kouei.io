@@ -1,5 +1,8 @@
 version: '3'
 
+vars:
+  SHELL: '{{if eq OS "windows"}}powershell {{end}}'
+
 tasks:
   dev:
     cmds:
@@ -7,8 +10,9 @@ tasks:
 
   build:
     cmds:
+      - task: clean
       - deno run build
 
   clean:
     cmds:
-      - rm -r output/
+      - '{{.SHELL}} rm -r _site/'

@@ -34,24 +34,30 @@ css: |
     ul.nav-list {
         padding: 1.5rem;
     }
-
-    .brand-link {
-        text-decoration: none;
-    }
 ---
 
 <header class="container">
 	<div class="header-wrapper">
 		<div class="branding-wrapper">
-            <strong><a class="primary brand-link" href="/">Moss Pakhapoca</a></strong>
+            <strong>Moss Pakhapoca</strong>
 		</div>
 		<div class="nav-wrapper">
 			<nav>
 				<ul class="nav-list">
 					<li>
+						<a class="secondary" href="/">Home</a>
+					</li>
+					<li>
 						<a class="secondary" href="/about">About Me</a>
 					</li>
 				</ul>
+                <ul class="icons">
+                    <li>
+                        <label>
+                            <input class="toggler" data-theme-switcher name="theme-switcher" type="checkbox" role="switch" checked="true" />
+                        </label>
+                    </li>
+                </ul>
 			</nav>
 		</div>
 	</div>
