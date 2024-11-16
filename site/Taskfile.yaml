@@ -4,15 +4,19 @@ vars:
   SHELL: '{{if eq OS "windows"}}powershell {{end}}'
 
 tasks:
+  default:
+    cmds:
+    - task: dev
+
   dev:
     cmds:
-      - deno run serve
+    - deno run serve
 
   build:
     cmds:
-      - task: clean
-      - deno run build
+    - task: clean
+    - deno run build
 
   clean:
     cmds:
-      - '{{.SHELL}} rm -r _site/'
+    - '{{.SHELL}} rm -r _site/'
